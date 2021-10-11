@@ -3,3 +3,4 @@
 - Manual workflow executor
 - Auto assign issues
 - Notify slack on release
+- Issue translator
