@@ -12,6 +12,7 @@ jobs:
       - uses: act10ns/slack@v1
         name: notify-slack
         with:
+          status: 'START'
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
           channel: #book
           message: "New release: {{ env.GITHUB_REF }}"
