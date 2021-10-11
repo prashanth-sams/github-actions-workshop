@@ -1,4 +1,3 @@
-
 // print binary algorithm in javascript
 function printBinary(n) {
   let binary = [];
