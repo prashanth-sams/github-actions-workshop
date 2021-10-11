@@ -21,6 +21,6 @@ jobs:
           tag_name: ${{ steps.gets_project_name.outputs.project_name }}
           release_name: New release ${{ steps.gets_project_name.outputs.project_name }}
           body: |
-            Here's what has changed:
+            Here's what has changed :
           draft: true
           prerelease: false
