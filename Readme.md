@@ -5,3 +5,4 @@
 - Notify slack on release
 - Issue translator
 - Create new release on closing a project
+- Linter
