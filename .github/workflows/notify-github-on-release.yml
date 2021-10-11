@@ -1,0 +1,21 @@
+name: New release
+
+# triggers the workflow when a tag is created
+on:
+  create:
+    ref: refs/tags/*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: act10ns/slack@v1
+        name: notify-slack
+        with:
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          channel: #book
+          message: "New release: {{ env.GITHUB_REF }}"
+          username: "{{ env.GITHUB_REPOSITORY }}"
+          icon_emoji: ":rocket:"
+          icon_url: "https://avatars2.githubusercontent.com/u/{{ env.GITHUB_REPOSITORY_OWNER_ID }}?v=4"
+          color: "#36a64f"
