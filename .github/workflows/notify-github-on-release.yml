@@ -14,7 +14,6 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
         with:
-          status: 'START'
-          if: always()
+          status: ${{ job.status }}
         
         
