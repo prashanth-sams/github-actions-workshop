@@ -17,3 +17,8 @@ function printBinary(n) {
 function printBinary(n) {
   return n.toString(2).split('').reverse().join('');
 }
+
+// print binary algorithm in javascript
+function printBinary(n) {
+  return n.toString(2).split('').reverse().join('');
+}
