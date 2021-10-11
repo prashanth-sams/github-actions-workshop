@@ -12,7 +12,7 @@ jobs:
     id: gets_project_name
     run: |
       PROJECT_NAME=$(echo "${{ github.event.project.name }}")
-      echo "::set-output name=project_name::PROJECT_NAME"
+      echo "::set-output name=project_name::pro-1"
   - name: Create new release
     id: create_new_release
     uses: actions/create-release@v1
