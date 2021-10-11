@@ -3,7 +3,7 @@ name: New release
 # triggers the workflow when a tag is created
 on:
   create:
-    ref: refs/tags/*
+    ref_type: tag
 
 jobs:
   release:
@@ -12,9 +12,8 @@ jobs:
       - name: slack notification
         uses: act10ns/slack@v1
         env:
-          SLACK_WEBHOOK_URL: {{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           status: ${{ job.status }}
-          channel: '#book'
         if: always()
         
