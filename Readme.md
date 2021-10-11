@@ -6,3 +6,4 @@
 - Issue translator
 - Create new release on closing a project
 - Linter
+- Auto merge on approval
