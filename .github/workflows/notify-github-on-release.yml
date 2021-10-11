@@ -9,10 +9,12 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: act10ns/slack@v1
-        name: notify-slack
+      - name: slack notification
+        uses: act10ns/slack@v1
+        env:
+          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
         with:
           status: 'START'
-          env:
-            SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
           if: always()
+        
+        
