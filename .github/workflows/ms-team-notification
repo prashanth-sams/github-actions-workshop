@@ -1,0 +1,19 @@
+... 
+- name: Notify dedicated teams channel
+      if: ${{ success() }}
+      uses: jdcargile/ms-teams-notification@v1.3
+      with:
+          github-token: ${{ github.token }} 
+          ms-teams-webhook-uri: ${{ secrets.DEV_MSTEAMS_WH }}
+          notification-summary: FI TEST REPORT - SUCCESSFUL
+          notification-color: 28a745
+          timezone: Europe/Copenhagen
+    - name: Notify dedicated teams channel
+      if: ${{ failure() }}
+      uses: jdcargile/ms-teams-notification@v1.3
+      with:
+          github-token: ${{ github.token }} 
+          ms-teams-webhook-uri: ${{ secrets.DEV_MSTEAMS_WH }} 
+          notification-summary:  FI TEST EXECUTION - FAILURE
+          notification-color: dc3545
+          timezone: Europe/Copenhagen
